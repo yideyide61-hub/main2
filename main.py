@@ -13,7 +13,8 @@ logger = logging.getLogger(__name__)
 
 # 🔑 Only this user ID can add the bot
 BOT_OWNER_ID = 7124683213  # Replace with your Telegram ID
-TOKEN = os.getenv("8466271055:AAHSf8kprzOKTqIj9_QPtpacdrZkjZW5SlU")  # BOT_TOKEN must be set in Railway/Render environment variables
+TOKEN = os.getenv("8466271055:AAHSf8kprzOKTqIj9_QPtpacdrZkjZW5SlU")  # Load token from environment
+
 
 # Flask app
 app = Flask(__name__)
@@ -57,5 +58,6 @@ def home():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
